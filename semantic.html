@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Sistem Informasi - ITTelkom Surabaya</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            padding: 20px;
+            background-color: #fff;
+            color: #000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 1px solid #000;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            border-bottom: 1px solid #000;
+        }
+
+        .logo-area {
+            width: 22%; /* Lebar disesuaikan agar teks muat dengan rapi */
+            padding: 10px;
+            border-right: 1px solid #000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #fff;
+        }
+
+        .logo-area img {
+            width: 45px;
+            height: auto;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text .title-main {
+            font-size: 11px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        .logo-text .title-sub {
+            font-size: 9px;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .nav-area {
+            width: 78%;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-area ul {
+            display: flex;
+            width: 100%;
+            list-style: none;
+        }
+
+        .nav-area li {
+            flex: 1;
+            text-align: center;
+            border-right: 1px solid #000;
+            padding: 20px 0;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .nav-area li:last-child {
+            border-right: none;
+            color: rgb(140, 2, 175);
+        }
+
+        /* Bagian Header Title */
+        .blog-header-title {
+            text-align: center;
+            padding: 25px 20px;
+            border-bottom: 1px solid #000;
+        }
+
+        .blog-header-title h1 {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* Main Content Utama */
+        .main-content {
+            display: flex;
+            border-bottom: 1px solid #000;
+        }
+
+        /* Bagian Artikel Content Sebelah Kiri */
+        .article-col {
+            width: 70%;
+            padding: 25px;
+            border-right: 1px solid #000;
+        }
+
+        .article-col h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .article-col p {
+            font-size: 12px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .article-col a {
+            color: #003cb3;
+            text-decoration: underline;
+        }
+
+        /* Mockup YouTube Video Container */
+        .video-container {
+            width: 100%;
+            background-color: #000;
+            border: 1px solid #666;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        /* Bagian Artikel Terbaru & Terpopuler */
+        .sidebar-col {
+            width: 30%;
+            padding: 20px;
+            font-size: 12px;
+        }
+
+        .sidebar-col h3 {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .sidebar-col ul {
+            list-style: disc;
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .sidebar-col li {
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .sidebar-col a {
+            color: purple;
+            text-decoration: none;
+        }
+
+        .sidebar-col a:hover {
+            text-decoration: underline;
+        }
+
+        /* Bagian Bawah */
+        .footer-info {
+            display: flex;
+            border-bottom: 1px solid #000;
+        }
+
+        .info-col-1 {
+            width: 50%;
+            padding: 20px;
+            border-right: 1px solid #000;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .info-col-1 h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .info-col-1 p {
+            margin-bottom: 12px;
+        }
+
+        .info-col-2 {
+            width: 25%;
+            padding: 20px;
+            border-right: 1px solid #000;
+            font-size: 12px;
+        }
+
+        .info-col-2 h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .info-col-2 ul {
+            list-style: disc;
+            padding-left: 15px;
+            margin-bottom: 15px;
+        }
+
+        .info-col-2 li {
+            margin-bottom: 5px;
+        }
+
+        .info-col-3 {
+            width: 25%;
+            padding: 20px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .info-col-3 h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .info-col-3 p {
+            margin-bottom: 8px;
+        }
+
+        .info-col-3 ul {
+            list-style: disc;
+            padding-left: 15px;
+        }
+
+        /* Bagian Paling Bawah */
+        .copyright {
+            padding: 15px 20px;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Bagian Header -->
+        <header>
+            <div class="logo-area">
+                <img src="assets/Logo ITTelkom Sby.jpg" alt="logo ittelkom sby" title="Logo ITTelkom Surabaya"/>
+                <div class="logo-text">
+                    <span class="title-main">SISTEM INFORMASI</span>
+                    <span class="title-sub">ITTelkom Surabaya</span>
+                </div>
+            </div>
+            <div class="nav-area">
+                <ul>
+                    <li>Tentang Kami</li>
+                    <li>Akademik</li>
+                    <li>Dosen & Staf</li>
+                    <li>Kerja Sama</li>
+                    <li>Blog</li>
+                    <li>Admisi</li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Bagian Header Title -->
+        <section class="blog-header-title">
+            <h1>Blog Sistem Informasi</h1>
+        </section>
+
+        <!-- Bagian Content Utama -->
+        <section class="main-content">
+            <!-- Left: Article Content -->
+            <div class="article-col">
+                <h2>Dua Wisudawan Sistem Informasi Berhasil Meraih Predikat Cumlaude</h2>
+                <p>Institut Teknologi Telkom Surabaya telah menggelar prosesi wisuda ke-1 secara luring di hotel Grand Dafam, Surabaya pada Sabtu (26/03/2022) kemarin. Prosesi wisuda ini merupakan yang pertama dilakukan sejak kampus ini berdiri di tahun 2018 lalu. Pada wisuda pertama ini, 16 wisudawan telah dinyatakan lulus secara sah oleh Rektor ITTelkom Surabaya Bapak Dr. Tri Arief Sardjono, S.T., M.T.</p>
+                <p>Seluruh wisudawan merupakan mahasiswa yang berhasil lulus dengan masa studi 3,5 tahun. Dua diantaranya merupakan mahasiswa program studi Sistem Informasi. Mereka adalah Amalina Tri Setya Berliana dan Irene Dyah Ayuwati. Keduanya berhasil menyandang gelar S.Kom dengan predikat cumlaude. Wisudawan dengan IPK tertinggi adalah Amalina Tri Setya Berliana yang tidak lain merupakan mahasiswa program studi Sistem Informasi dengan IPK 3.96.</p>
+                <p>Pada prosesi wisuda ini pula, Rektor ITTelkom Surabaya telah menyampaikan pesannya dengan penuh sukacita. Beliau berpesan bagi seluruh wisudawan agar terus mengembangkan diri sehingga dapat mengambil peran di era transformasi digital yang disruptif ini. Acara wisuda ini dapat disaksikan melalui kanal youtube ITTelkom Surabaya <a href="https://youtu.be/69QrUrhu7xQ" target="_blank">https://youtu.be/69QrUrhu7xQ</a></p>
+
+                <!-- Bagian Video -->
+                <div class="video-container">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/69QrUrhu7xQ?si=v0TQRHOcqejdm2r1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+            </div>
+
+            <!-- Bagian Artikel Terbaru & Terpopuler -->
+            <div class="sidebar-col">
+                <h3>Artikel Terbaru</h3>
+                <ul>
+                    <li><a href="#">Dua Wisudawan Sistem Informasi Berhasil Meraih Predikat Cumlaude</a></li>
+                    <li><a href="#">Dua Mahasiswa Sistem Informasi Raih Penghargaan di ajang Putra Putri Jatim 2021</a></li>
+                    <li><a href="#">PLAYBOX hadir kembali !!! Segera daftarkan dirimu di PLAYBOX Season II</a></li>
+                    <li><a href="#">Dua Wisudawan Sistem Informasi Berhasil Meraih Predikat Cumlaude</a></li>
+                    <li><a href="#">Dua Mahasiswa Sistem Informasi Raih Penghargaan di ajang Putra Putri Jatim 2021</a></li>
+                    <li><a href="#">PLAYBOX hadir kembali !!! Segera daftarkan dirimu di PLAYBOX Season II</a></li>
+                </ul>
+
+                <h3>Artikel Terpopuler</h3>
+                <ul>
+                    <li><a href="#">Dua Wisudawan Sistem Informasi Berhasil Meraih Predikat Cumlaude</a></li>
+                    <li><a href="#">Dua Mahasiswa Sistem Informasi Raih Penghargaan di ajang Putra Putri Jatim 2021</a></li>
+                    <li><a href="#">PLAYBOX hadir kembali !!! Segera daftarkan dirimu di PLAYBOX Season II</a></li>
+                    <li><a href="#">Dua Wisudawan Sistem Informasi Berhasil Meraih Predikat Cumlaude</a></li>
+                    <li><a href="#">Dua Mahasiswa Sistem Informasi Raih Penghargaan di ajang Putra Putri Jatim 2021</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Bagian Bawah -->
+        <section class="footer-info">
+            <div class="info-col-1">
+                <h3>Sistem Informasi</h3>
+                <p>Situs resmi Program Studi Sistem Informasi Institut Teknologi Telkom Surabaya. Website ini diperuntukkan sebagai media komunikasi internal & eksternal bagi mahasiswa, dosen, dan karyawan.</p>
+                <p>Program Studi Sistem Informasi sudah ada sejak berdirinya Institut Teknologi Telkom Surabaya, berdasarkan Keputusan Menteri Riset, Teknologi, dan Pendidikan Tinggi no. 733/KPT/I/2018.</p>
+                <p>Website ini menyajikan informasi tentang Program Studi Sistem Informasi, profil, visi dan misi, struktur organisasi, akademisi, kurikulum, dosen, penelitian dan pengabdian kepada masyarakat.</p>
+            </div>
+            <div class="info-col-2">
+                <h3>Tautan Penting</h3>
+                <ul>
+                    <li>Mahasiswa & Alumni</li>
+                    <li>Kerja Sama</li>
+                    <li>Proyek</li>
+                </ul>
+                <h3>Tautan Bermanfaat</h3>
+                <ul>
+                    <li>Telkom Indonesia</li>
+                    <li>Yayasan Pendidikan Telkom</li>
+                    <li>ITTelkom Surabaya</li>
+                    <li>Website SMB</li>
+                </ul>
+            </div>
+            <div class="info-col-3">
+                <h3>Info Kontak</h3>
+                <p><strong>Alamat:</strong> Jl. Ketintang No.156, Surabaya, Jawa Timur 60231</p>
+                <p><strong>Telepon:</strong> +62 31 8280800</p>
+                <p><strong>Email:</strong> is@ittekom-sby.ac.id</p>
+                <h3 style="margin-top: 15px;">Media Sosial</h3>
+                <ul>
+                    <li>Instagram</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Bagian Paling Bawah -->
+        <div class="copyright">
+            <p>Copyright © 2022 Information Systems</p>
+            <p>Build with ♥ by CODER Team</p>
+        </div>
+    </div>
+
+</body>
+</html>
