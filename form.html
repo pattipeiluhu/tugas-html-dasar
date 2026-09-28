@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 20px;
+            color: #000;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        fieldset {
+            border: 1px solid #767676;
+            padding: 15px 20px 20px 20px;
+            margin-bottom: 20px;
+            border-radius: 0px;
+        }
+
+        legend {
+            padding: 0 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 5px 0;
+            vertical-align: top;
+        }
+
+        td.label {
+            width: 200px;
+        }
+
+        td.separator {
+            width: 15px;
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="url"],
+        textarea,
+        select {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            padding: 3px 5px;
+            border: 1px solid #767676;
+            width: 300px;
+        }
+
+        textarea {
+            height: 80px;
+            resize: vertical;
+        }
+
+        input[type="file"] {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+        }
+
+        .checkbox-group label {
+            margin-right: 15px;
+            display: inline-block;
+        }
+
+        .buttons {
+            margin-top: 10px;
+        }
+
+        .buttons button {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            padding: 3px 12px;
+            margin-right: 5px;
+            background-color: #efefef;
+            border: 1px solid #767676;
+            cursor: pointer;
+        }
+
+        .buttons button:active {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Form Registrasi</h2>
+
+    <form>
+        <!-- Bagian Biodata -->
+        <fieldset>
+            <legend>Biodata</legend>
+            <table>
+                <tr>
+                    <td class="label">Nama Mahasiswa</td>
+                    <td class="separator">:</td>
+                    <td><input type="text" placeholder="Nama Anda"></td>
+                </tr>
+                <tr>
+                    <td class="label">No Induk Mahasiswa (NIM)</td>
+                    <td class="separator">:</td>
+                    <td><input type="text" placeholder="123456789"></td>
+                </tr>
+                <tr>
+                    <td class="label">Alamat Mahasiswa</td>
+                    <td class="separator">:</td>
+                    <td><textarea placeholder="Alamat Anda"></textarea></td>
+                </tr>
+                <tr>
+                    <td class="label">Tanggal Lahir</td>
+                    <td class="separator">:</td>
+                    <td>
+                        <select>
+                            <option>24</option>
+                        </select>
+                        <select>
+                            <option>Maret</option>
+                        </select>
+                        <select>
+                            <option>2007</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Jenis Kelamin</td>
+                    <td class="separator">:</td>
+                    <td>
+                        <label><input type="radio" name="gender" checked> Pria</label>
+                        <label><input type="radio" name="gender"> Wanita</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Upload Foto</td>
+                    <td class="separator">:</td>
+                    <td><input type="file"></td>
+                </tr>
+                <tr>
+                    <td class="label">URL Website</td>
+                    <td class="separator">:</td>
+                    <td><input type="url" placeholder="URL Website Anda" style="width: 350px;"></td>
+                </tr>
+                <tr>
+                    <td class="label">Perguruan Tinggi</td>
+                    <td class="separator">:</td>
+                    <td><input type="text" style="width: 200px;"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <!-- Bagian Info Akun -->
+        <fieldset>
+            <legend>Info Akun</legend>
+            <table>
+                <tr>
+                    <td class="label">Email</td>
+                    <td class="separator">:</td>
+                    <td><input type="text" placeholder="Email Anda"></td>
+                </tr>
+                <tr>
+                    <td class="label">Username</td>
+                    <td class="separator">:</td>
+                    <td><input type="text" placeholder="Username Anda"></td>
+                </tr>
+                <tr>
+                    <td class="label">Password</td>
+                    <td class="separator">:</td>
+                    <td><input type="password" placeholder="Password Anda"></td>
+                </tr>
+                <tr>
+                    <td class="label">Ulangi Password</td>
+                    <td class="separator">:</td>
+                    <td><input type="password" placeholder="Password Anda"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <!-- Bagian Kemampuan Dasar -->
+        <fieldset>
+            <legend>Kemampuan Dasar</legend>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> HTML</label>
+                <label><input type="checkbox"> CSS</label>
+                <label><input type="checkbox"> Javascript</label>
+                <label><input type="checkbox"> PHP</label>
+                <label><input type="checkbox"> MySQL</label>
+                <label><input type="checkbox"> Laravel</label>
+                <label><input type="checkbox"> React Native</label>
+            </div>
+        </fieldset>
+
+        <!-- Tombol Aksi -->
+        <div class="buttons">
+            <button type="reset">Reset</button>
+            <button type="submit">Simpan</button>
+            <button type="button">Button</button>
+        </div>
+    </form>
+
+</body>
+</html>
